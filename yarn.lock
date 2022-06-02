@@ -4192,6 +4192,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clsx@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "clsx@npm:1.1.1"
+  checksum: ff052650329773b9b245177305fc4c4dc3129f7b2be84af4f58dc5defa99538c61d4207be7419405a5f8f3d92007c954f4daba5a7b74e563d5de71c28c830063
+  languageName: node
+  linkType: hard
+
 "co@npm:^4.6.0":
   version: 4.6.0
   resolution: "co@npm:4.6.0"
@@ -6039,6 +6046,7 @@ __metadata:
     react: ^18.1.0
     react-dom: ^18.1.0
     react-scripts: 5.0.1
+    react-toastify: ^9.0.3
     web-vitals: ^2.1.4
   languageName: unknown
   linkType: soft
@@ -10239,6 +10247,18 @@ __metadata:
   bin:
     react-scripts: bin/react-scripts.js
   checksum: 92afa2f245c7092ccc97d5609dc7a2130616262e34da7f15072d9442e2d2e1d4909a91022abd1faac1336eb17c5525a10d9bd43e1ae374c7ec941ca20addca68
+  languageName: node
+  linkType: hard
+
+"react-toastify@npm:^9.0.3":
+  version: 9.0.3
+  resolution: "react-toastify@npm:9.0.3"
+  dependencies:
+    clsx: ^1.1.1
+  peerDependencies:
+    react: ">=16"
+    react-dom: ">=16"
+  checksum: 4beacd1dbfcdcd70d70c6ce12f85b9bab5554b7659262654283efc8813ad55dd595a27faf359da2061249dc8eea563cc80139be95a03c75f40fccb3c34de2349
   languageName: node
   linkType: hard
 
