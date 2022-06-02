@@ -1,25 +1,27 @@
-import { useContext } from "react";
-
 import Modal from "../UI/Modal";
 import CartItem from "./CartItem";
 import classes from "./Cart.module.css";
-import CartContext from "../../store/cart-context";
+import { useCartContext } from "../../store/cart-context";
+import { toast } from 'react-toastify';
 
-const Cart = (props) => {
-  const cartCtx = useContext(CartContext);
+const Cart = ({ onClose }) => {
+  const { items, totalAmount, addItem, removeItem } = useCartContext();
 
-  const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
-  const hasItems = cartCtx.items.length > 0;
+  const formattedTotalAmount = `$${totalAmount.toFixed(2)}`;
+  const hasItems = items.length > 0;
 
   const cartItemRemoveHandler = (id) => {
-    cartCtx.removeItem(id);
+    removeItem(id);
   };
 
   const cartItemAddHandler = (item) => {
-    cartCtx.addItem({ ...item, amount: 1 });
+    addItem({ ...item, amount: 1 });
   };
 
-  const cartItems = cartCtx.items.map((item) => (
+  const orderClickHandler = () => {
+    toast.success('Your order submitted!');
+  }
+  const cartItems = items.map((item) => (
     <CartItem
       key={item.id}
       name={item.name}
@@ -31,17 +33,23 @@ const Cart = (props) => {
   ));
 
   return (
-    <Modal onClose={props.onClose}>
+    <Modal onClose={onClose}>
       <ul className={classes["cart-items"]}>{cartItems}</ul>
-      <div className={classes.total}>
-        <span>Total Amount</span>
-        <span>{totalAmount}</span>
-      </div>
+      {hasItems ? (
+        <div className={classes.total}>
+          <span>Total Amount</span>
+          <span>{formattedTotalAmount}</span>
+        </div>
+      ) : (
+        <div className={classes.total}>
+          <span>Your cart is empty.</span>
+        </div>
+      )}
       <div className={classes.actions}>
-        <button className={classes["button--alt"]} onClick={props.onClose}>
+        <button className={classes["button--alt"]} onClick={onClose}>
           Close
         </button>
-        {hasItems && <button className={classes.button}>Order</button>}
+        {hasItems && <button className={classes.button} onClick={orderClickHandler}>Order</button>}
       </div>
     </Modal>
   );

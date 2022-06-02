@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import ReactDOM from "react-dom";
 import classes from "./Modal.module.css";
+import "react-toastify/dist/ReactToastify.css";
 
 const Backdrop = ({ onClose }) => {
   return <div className={classes.backdrop} onClick={onClose} />;

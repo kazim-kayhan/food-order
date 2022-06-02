@@ -39,6 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.1.0"],\
             ["react-dom", "virtual:10feb490f110943a91665117cb7307320a57f140e8219adc48b3b521ec9252360b9a838233b8436c94225544a0016ad620347b44ab0e0362372975a655d04948#npm:18.1.0"],\
             ["react-scripts", "virtual:10feb490f110943a91665117cb7307320a57f140e8219adc48b3b521ec9252360b9a838233b8436c94225544a0016ad620347b44ab0e0362372975a655d04948#npm:5.0.1"],\
+            ["react-toastify", "virtual:10feb490f110943a91665117cb7307320a57f140e8219adc48b3b521ec9252360b9a838233b8436c94225544a0016ad620347b44ab0e0362372975a655d04948#npm:9.0.3"],\
             ["web-vitals", "npm:2.1.4"]\
           ],\
           "linkType": "SOFT"\
@@ -6309,6 +6310,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["clsx", [\
+        ["npm:1.1.1", {\
+          "packageLocation": "./.yarn/cache/clsx-npm-1.1.1-362bec0598-ff05265032.zip/node_modules/clsx/",\
+          "packageDependencies": [\
+            ["clsx", "npm:1.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["co", [\
         ["npm:4.6.0", {\
           "packageLocation": "./.yarn/cache/co-npm-4.6.0-03f2d1feb6-5210d92230.zip/node_modules/co/",\
@@ -8675,6 +8685,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.1.0"],\
             ["react-dom", "virtual:10feb490f110943a91665117cb7307320a57f140e8219adc48b3b521ec9252360b9a838233b8436c94225544a0016ad620347b44ab0e0362372975a655d04948#npm:18.1.0"],\
             ["react-scripts", "virtual:10feb490f110943a91665117cb7307320a57f140e8219adc48b3b521ec9252360b9a838233b8436c94225544a0016ad620347b44ab0e0362372975a655d04948#npm:5.0.1"],\
+            ["react-toastify", "virtual:10feb490f110943a91665117cb7307320a57f140e8219adc48b3b521ec9252360b9a838233b8436c94225544a0016ad620347b44ab0e0362372975a655d04948#npm:9.0.3"],\
             ["web-vitals", "npm:2.1.4"]\
           ],\
           "linkType": "SOFT"\
@@ -14188,6 +14199,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/typescript",\
             "react",\
             "typescript"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-toastify", [\
+        ["npm:9.0.3", {\
+          "packageLocation": "./.yarn/cache/react-toastify-npm-9.0.3-286bf708e7-4beacd1dbf.zip/node_modules/react-toastify/",\
+          "packageDependencies": [\
+            ["react-toastify", "npm:9.0.3"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:10feb490f110943a91665117cb7307320a57f140e8219adc48b3b521ec9252360b9a838233b8436c94225544a0016ad620347b44ab0e0362372975a655d04948#npm:9.0.3", {\
+          "packageLocation": "./.yarn/__virtual__/react-toastify-virtual-15f6e735e3/0/cache/react-toastify-npm-9.0.3-286bf708e7-4beacd1dbf.zip/node_modules/react-toastify/",\
+          "packageDependencies": [\
+            ["react-toastify", "virtual:10feb490f110943a91665117cb7307320a57f140e8219adc48b3b521ec9252360b9a838233b8436c94225544a0016ad620347b44ab0e0362372975a655d04948#npm:9.0.3"],\
+            ["@types/react", null],\
+            ["@types/react-dom", null],\
+            ["clsx", "npm:1.1.1"],\
+            ["react", "npm:18.1.0"],\
+            ["react-dom", "virtual:10feb490f110943a91665117cb7307320a57f140e8219adc48b3b521ec9252360b9a838233b8436c94225544a0016ad620347b44ab0e0362372975a655d04948#npm:18.1.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
