@@ -21,9 +21,14 @@ const CartProvider = ({ children }) => {
     dispatchCartAction({ type: "REMOVE", id: id });
   };
 
+  const clearCartHandler = () => {
+    dispatchCartAction({ type: "CLEAR" });
+  };
+
   const cartContext = {
     items: cartState.items,
     totalAmount: cartState.totalAmount,
+    clearCart: clearCartHandler,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
   };
